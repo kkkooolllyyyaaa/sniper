@@ -1,0 +1,28 @@
+package com.tsypk.sniper.model.graph.shapes;
+
+/**
+ * @author tsypk on 07.02.2022 10:08
+ * @project sniper
+ */
+public class Rectangle extends Shape {
+    private final double xMultiplier;
+    private final double yMultiplier;
+
+    public Rectangle(Radius xRad, Radius yRad) {
+        if (xRad == Radius.HALF_R)
+            xMultiplier = 1.0d / 2.0d;
+        else
+            xMultiplier = 1.0d;
+        if (yRad == Radius.HALF_R)
+            yMultiplier = 1.0d / 2.0d;
+        else
+            yMultiplier = 1.0d;
+    }
+
+    @Override
+    public boolean isHit(double radius, double x, double y) {
+        x = Math.abs(x);
+        y = Math.abs(y);
+        return (x * xMultiplier) <= radius && (y * yMultiplier) <= radius;
+    }
+}
