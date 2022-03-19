@@ -14,6 +14,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.web.cors.CorsConfiguration;
+
 
 /**
  * @author tsypk on 03.02.2022 04:21
@@ -32,26 +34,34 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.cors().configurationSource(request -> {
+            CorsConfiguration configuration = new CorsConfiguration();
+            configuration.applyPermitDefaultValues();
+            configuration.addAllowedHeader("GET");
+            configuration.addAllowedHeader("POST");
+            configuration.addAllowedMethod("DELETE");
+            return configuration;
+        });
         http
+
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
+                .antMatchers("/users/login").permitAll()
                 .antMatchers("/users/register").permitAll()
                 .anyRequest()
                 .authenticated()
 
                 .and()
-                .formLogin()
-                .loginPage("/users/login").permitAll()
-                .defaultSuccessUrl("/users/success")
+                .httpBasic()
 
                 .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/users/logout", "POST"))
+                .logoutRequestMatcher(new AntPathRequestMatcher("/users/logout", "GET"))
                 .invalidateHttpSession(true)
                 .clearAuthentication(true)
-                .deleteCookies("JSESSIONID")
-                .logoutSuccessUrl("/users/login");
+                .deleteCookies("JSESSIONID");
     }
 
     @Override

@@ -39,7 +39,7 @@ public class PointServiceImpl implements PointService {
     @Override
     public List<Point> getAllByUserId(Long id) {
         List<Point> result = pointRepository.findAllByUserId(id);
-        log.info("[getAllByUserId total {} points found", result.size());
+        log.info("[getAllByUserId] total {} points found", result.size());
         return result;
     }
 

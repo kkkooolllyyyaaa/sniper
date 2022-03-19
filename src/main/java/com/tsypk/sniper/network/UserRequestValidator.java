@@ -23,7 +23,7 @@ public class UserRequestValidator {
 
         StringBuilder message = new StringBuilder();
         for (ConstraintViolation<UserDTO> violation : violations) {
-            message.append(violation.getMessage()).append("\n");
+            message.append(violation.getMessage());
         }
         throw new BadRequestException(message.toString());
     }

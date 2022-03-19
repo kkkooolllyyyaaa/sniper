@@ -22,7 +22,7 @@ public class PointRequestValidator {
 
         StringBuilder message = new StringBuilder();
         for (ConstraintViolation<PointDTO> violation : violations) {
-            message.append(violation.getMessage()).append("\n");
+            message.append(violation.getMessage());
         }
         throw new BadRequestException(message.toString());
     }

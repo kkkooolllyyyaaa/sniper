@@ -17,17 +17,19 @@ import javax.validation.constraints.NotNull;
 @Setter
 public class PointDTO {
     @NotNull
-    @Min(-4)
-    @Max(4)
+    @Min(value = -4, message = "x должен быть не менее -4")
+    @Max(value = 4, message = "x должен быть не более 4")
     private Double x;
     @NotNull
-    @Min(-5)
-    @Max(5)
+    @Min(value = -5, message = "y должен быть не менее -5")
+    @Max(value = 5, message = "y должен быть не более 5")
     private Double y;
     @NotNull
-    @Min(1)
-    @Max(4)
+    @Min(value = 1, message = "radius должен быть не менее 1")
+    @Max(value = 4, message = "radius должен быть не больше 4")
     private Double radius;
+
+    private Long id;
 
     private boolean result;
 }

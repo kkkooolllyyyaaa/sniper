@@ -10,11 +10,11 @@ public class Rectangle extends Shape {
 
     public Rectangle(Radius xRad, Radius yRad) {
         if (xRad == Radius.HALF_R)
-            xMultiplier = 1.0d / 2.0d;
+            xMultiplier = 2.0d;
         else
             xMultiplier = 1.0d;
         if (yRad == Radius.HALF_R)
-            yMultiplier = 1.0d / 2.0d;
+            yMultiplier = 2.0d;
         else
             yMultiplier = 1.0d;
     }

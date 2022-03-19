@@ -42,6 +42,7 @@ public class PointsController {
 
 
     @GetMapping("/get")
+    @CrossOrigin
     @PreAuthorize("hasAuthority('points:read')")
     public List<PointDTO> getAll(Principal principal) {
         User user = userService.findByUsername(principal.getName());
@@ -53,6 +54,7 @@ public class PointsController {
     }
 
     @PostMapping("/check")
+    @CrossOrigin
     @PreAuthorize("hasAuthority('points:write')")
     public ResponseEntity<?> check(Principal principal, @RequestBody PointDTO pointDTO) {
         validator.validate(pointDTO);
@@ -64,10 +66,11 @@ public class PointsController {
 
         log.info("[check] point of user: {} successfully checked", principal.getName());
 
-        return ResponseEntity.ok().body(optionalPoint);
+        return ResponseEntity.ok().body(checkAndConvert(optionalPoint.get()));
     }
 
     @DeleteMapping("/clear")
+    @CrossOrigin
     @PreAuthorize("hasAuthority('points:delete')")
     public ResponseEntity<?> clear(Principal principal) {
         User user = userService.findByUsername(principal.getName());
@@ -86,6 +89,7 @@ public class PointsController {
         dto.setY(point.getY());
         dto.setRadius(point.getRadius());
         dto.setResult(point.getResult());
+        dto.setId(point.getId());
         return dto;
     }
 

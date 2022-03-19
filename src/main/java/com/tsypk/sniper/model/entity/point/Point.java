@@ -1,9 +1,6 @@
 package com.tsypk.sniper.model.entity.point;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -16,11 +13,12 @@ import java.io.Serializable;
  */
 @Entity
 @Table(schema = "sniper_schema", name = "points")
-
+@AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
 @ToString
+@Builder
 public class Point implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

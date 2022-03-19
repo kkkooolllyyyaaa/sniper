@@ -14,7 +14,7 @@ public class Triangle extends Shape {
         else if (xRad == Radius.R)
             k = 1.0d / 2.0d;
         else
-            k = 1.0d;
+            k = 2.0d;
 
         if (yRad == Radius.R)
             bMulti = 1.0d;
@@ -27,6 +27,6 @@ public class Triangle extends Shape {
         double b = bMulti * radius;
         y = Math.abs(y);
         x = Math.abs(x);
-        return y <= (k * x + b);
+        return y <= (-k * x + b);
     }
 }
