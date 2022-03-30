@@ -10,6 +10,6 @@ Area check REST backend, Spring ecosystem usages
 "Мобильный"- для устройств, ширина экрана которых меньше 879 пикселей.
   
 # Внешний вид сайта
-https://user-images.githubusercontent.com/72232007/159191074-f32e70d5-e0a3-4a4a-971d-bef5c31f8494.png
-https://user-images.githubusercontent.com/72232007/159191130-d1bb3f74-ec8b-42e0-ada6-d6bff54826a1.png
-https://user-images.githubusercontent.com/72232007/159191118-77a525e7-c595-4630-af01-448b756f9b16.png
+<img width="1417" alt="image" src="https://user-images.githubusercontent.com/72232007/160911478-47a289fb-e47c-42bc-a42a-95bd12e7a709.png">
+<img width="1417" alt="image" src="https://user-images.githubusercontent.com/72232007/160911489-e08c95be-22f2-4bba-9aad-6b175c7fcf8d.png">
+<img width="1417" alt="image" src="https://user-images.githubusercontent.com/72232007/160911546-7ce3b9d9-1922-4d41-9732-d22e9f8ea184.png">
