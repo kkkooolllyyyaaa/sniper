@@ -11,5 +11,5 @@ Area check REST backend, Spring ecosystem usages
   
 # Внешний вид сайта
 <img width="1417" alt="image" src="https://user-images.githubusercontent.com/72232007/160911478-47a289fb-e47c-42bc-a42a-95bd12e7a709.png">
-<img width="1417" alt="image" src="https://user-images.githubusercontent.com/72232007/160911489-e08c95be-22f2-4bba-9aad-6b175c7fcf8d.png">
-<img width="1417" alt="image" src="https://user-images.githubusercontent.com/72232007/160911546-7ce3b9d9-1922-4d41-9732-d22e9f8ea184.png">
+<img width="1432" alt="image" src="https://user-images.githubusercontent.com/72232007/160911756-34984b49-5b32-4560-98a7-abe45961a75a.png">
+<img width="1425" alt="image" src="https://user-images.githubusercontent.com/72232007/160911827-10005907-51fe-4562-a285-313be388c66f.png">
