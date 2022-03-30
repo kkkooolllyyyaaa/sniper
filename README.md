@@ -14,9 +14,9 @@ Area check REST backend, Spring ecosystem usages
 ## [Frontend source](https://github.com/kkkooolllyyyaaa/sniper-frontend)
 
 ## In the [application.properties](https://github.com/kkkooolllyyyaaa/sniper/blob/master/src/main/resources/application.properties) you need to write:
- > * spring.datasource.url= "your_database_url"
- > * spring.datasource.username= "your_database_user"
- > * spring.datasource.password= "your_database_password"
++ spring.datasource.url= "your_database_url"
++ spring.datasource.username= "your_database_user"
++ spring.datasource.password= "your_database_password"
 
 ## Run:
 mvn spring-boot:run
