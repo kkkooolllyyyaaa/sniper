@@ -13,9 +13,9 @@ Area check REST backend, Spring ecosystem usages
 <img width="1425" alt="image" src="https://user-images.githubusercontent.com/72232007/160911827-10005907-51fe-4562-a285-313be388c66f.png">
 
 ## In the [application.properties](https://github.com/kkkooolllyyyaaa/sniper/blob/master/src/main/resources/application.properties) you need to write:
-+ `spring.datasource.url= "your_database_url"`
-+ `spring.datasource.username= "your_database_user"`
-+ `spring.datasource.password= "your_database_password"`
++ `spring.datasource.url=<your_database_url>`
++ `spring.datasource.username=<your_database_user>`
++ `spring.datasource.password=<your_database_password>`
 
 ## Run:
 `mvn spring-boot:run`
