@@ -1,4 +1,4 @@
-# Sniper application #
+# Sniper backend application #
 
 Area check REST backend, Spring ecosystem usages
 + spring core 
